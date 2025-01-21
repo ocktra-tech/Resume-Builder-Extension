@@ -1,0 +1,136 @@
+:root{
+    --primary-color: #916dfd;
+    --primary-diluated-color: #f9f8fd;
+    --secondary-color: #f9fafb;
+    --icon-color:#3e5772;
+    --green-color:#2fc23a;
+}
+
+#xpresscv-popup{
+    position: fixed;
+    top:30px;
+    right:30px;
+    background-color: var(--primary-diluated-color);
+    width: 300px;
+    height: 400px;
+    border-radius: 16px;
+    box-shadow: 0 0px 16px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+
+.xpresscv-logo{
+    padding:4px;
+    margin-left:2px;
+    border-bottom:1px solid var(--primary-color);
+}
+
+#xpresscv-download-btn{
+    text-decoration: none;
+    margin-left:12px;
+}
+
+#cv-logo{
+    width:25px;
+    height: 25px;
+    margin-left: 8px;
+    margin-top:4px;
+}
+
+#xpresscv-min-popup{
+    position: fixed;
+    top:80px;
+    right:0px;
+    background-color: var(--primary-diluated-color);
+    width: 50px;
+    display:flex;
+    flex-direction: column;
+    border-radius: 16px 0px 0px 16px;
+    box-shadow: 0 0px 16px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+
+.xpresscv-options{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-color);
+    justify-content: flex-end;
+    padding: 4px;
+}
+
+.xpresscv-op-options{
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+}
+
+.options-btn{
+    background-color: var(--primary-color);
+    color:white;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+#host-div{
+    height: 100%;
+}
+
+#host-ext{
+    height: 100%;
+}
+
+.loader {
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.loader div {
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+.loader div:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation-delay: 0s;
+}
+.loader div:nth-child(2) {
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    animation-delay: 0.2s;
+}
+.loader div:nth-child(3) {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 0.4s;
+}
+.loader div:nth-child(4) {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    animation-delay: 0.6s;
+}
+
+@keyframes loader-animation {
+    0%, 100% {
+      transform: scale(1);
+      background:  var(--primary-color);
+    }
+    50% {
+      transform: scale(1.5);
+      background:  var(--primary-color);
+    }
+}
+
+
+
+

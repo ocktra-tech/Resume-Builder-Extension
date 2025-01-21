@@ -1,0 +1,50 @@
+{
+    "manifest_version": 3,
+    "name":"Xpress CV",
+    "description":"Automate the process of resume generation tailored to job descrption",
+    "version": "1.0.0",
+    "permissions":[
+        "commands",
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "action": {
+        "default_title": "Show Popup"
+    },
+    "background": {
+        "service_worker": "src/background/index.js"
+    },
+    "icons": {
+        "16": "icons/img16.png",
+        "64": "icons/img64.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["icons/img64.png"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "content_scripts":[
+        {
+            "matches": ["<all_urls>"],
+            "js": ["src/content/index.js"],
+            "css": ["styles.css"]
+        }
+    ],
+    
+    "commands":{
+        "reload":{
+            "suggested_key":{
+                "default":"Ctrl+Shift+E",
+                "mac":"Command+Shift+E"
+            },
+            "description":"Reload the extension"
+        }
+    }
+    
+}

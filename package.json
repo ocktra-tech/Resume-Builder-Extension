@@ -1,0 +1,37 @@
+{
+    "name": "",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "license": "AGPL-version-3.0",
+    "private": false,
+    "engines": {
+        "node": ">= 14.0.0",
+        "npm": ">= 6.0.0"
+    },
+    "homepage": "",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "bugs": "",
+    "keywords": [],
+    "author": {
+        "name": "",
+        "email": "",
+        "url": ""
+    },
+    "contributors": [],
+    "scripts": {
+        "clean": "rm -rf dist",
+        "compile":"npx tsc",
+        "copy-assets":"rsync -av --exclude 'tsconfig.json' --exclude 'src' --exclude node_modules --exclude package-lock.json --exclude package.json --exclude 'dist' ./ dist/" ,
+        "build": "npm run compile && npm run copy-assets"
+    },
+    "devDependencies": {
+        "@types/chrome": "^0.0.297",
+        "typescript": "^5.7.3"
+    }
+  }
+  
