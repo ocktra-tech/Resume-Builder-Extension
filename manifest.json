@@ -10,8 +10,7 @@
         "scripting"
     ],
     "host_permissions": [
-        "http://*/*",
-        "https://*/*"
+        "https://linkedin.com/*"
     ],
     "action": {
         "default_title": "Show Popup"
